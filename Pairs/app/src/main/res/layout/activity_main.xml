@@ -20,6 +20,7 @@
         android:layout_marginTop="21dp"
         android:layout_marginEnd="15dp"
         android:background="@drawable/layout_circle"
+        android:onClick="setCards"
         android:padding="9dp"
         android:src="@drawable/ic_baseline_restart_alt_black"
         app:layout_constraintEnd_toEndOf="parent"
@@ -47,131 +48,293 @@
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.6666" />
 
-        <ImageView
-            android:id="@+id/ivCard1"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvCard1"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="15dp"
             android:layout_marginTop="12dp"
             android:layout_marginEnd="3dp"
-            android:background="@drawable/layout_circle"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="24dp"
             app:layout_constraintDimensionRatio="1:1"
             app:layout_constraintEnd_toStartOf="@+id/gCardsVertical33"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="ContentDescription" />
+            app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/ivCard2"
+            <ImageView
+                android:id="@+id/ivCard1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="flipCard1"
+                android:src="@drawable/pokemon"
+                tools:ignore="ContentDescription" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvCard2"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="9dp"
             android:layout_marginTop="12dp"
             android:layout_marginEnd="9dp"
-            android:background="@drawable/layout_circle"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="24dp"
             app:layout_constraintDimensionRatio="1:1"
             app:layout_constraintEnd_toStartOf="@+id/gCardsVertical66"
             app:layout_constraintStart_toStartOf="@+id/gCardsVertical33"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="ContentDescription" />
+            app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/ivCard3"
+            <ImageView
+                android:id="@+id/ivCard2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="flipCard2"
+                android:src="@drawable/pokemon"
+                tools:ignore="ContentDescription" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvCard3"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="3dp"
             android:layout_marginTop="12dp"
             android:layout_marginEnd="15dp"
-            android:background="@drawable/layout_circle"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="24dp"
             app:layout_constraintDimensionRatio="1:1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/gCardsVertical66"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="ContentDescription" />
+            app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/ivCard4"
+            <ImageView
+                android:id="@+id/ivCard3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="flipCard3"
+                android:src="@drawable/pokemon"
+                tools:ignore="ContentDescription" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvCard4"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="15dp"
             android:layout_marginTop="12dp"
             android:layout_marginEnd="3dp"
-            android:background="@drawable/layout_circle"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="24dp"
             app:layout_constraintDimensionRatio="1:1"
             app:layout_constraintEnd_toStartOf="@+id/gCardsVertical33"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ivCard1"
-            tools:ignore="ContentDescription" />
+            app:layout_constraintTop_toBottomOf="@+id/cvCard1">
 
-        <ImageView
-            android:id="@+id/ivCard5"
+            <ImageView
+                android:id="@+id/ivCard4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="flipCard4"
+                android:src="@drawable/pokemon"
+                tools:ignore="ContentDescription" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvCard5"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="9dp"
             android:layout_marginTop="12dp"
             android:layout_marginEnd="9dp"
-            android:background="@drawable/layout_circle"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="24dp"
             app:layout_constraintDimensionRatio="1:1"
             app:layout_constraintEnd_toStartOf="@+id/gCardsVertical66"
             app:layout_constraintStart_toStartOf="@+id/gCardsVertical33"
-            app:layout_constraintTop_toBottomOf="@+id/ivCard2"
-            tools:ignore="ContentDescription" />
+            app:layout_constraintTop_toBottomOf="@+id/cvCard2">
 
-        <ImageView
-            android:id="@+id/ivCard6"
+            <ImageView
+                android:id="@+id/ivCard5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="flipCard5"
+                android:src="@drawable/pokemon"
+                tools:ignore="ContentDescription" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvCard6"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="3dp"
             android:layout_marginTop="12dp"
             android:layout_marginEnd="15dp"
-            android:background="@drawable/layout_circle"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="24dp"
             app:layout_constraintDimensionRatio="1:1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/gCardsVertical66"
-            app:layout_constraintTop_toBottomOf="@+id/ivCard3"
-            tools:ignore="ContentDescription" />
+            app:layout_constraintTop_toBottomOf="@+id/cvCard3">
 
-        <ImageView
-            android:id="@+id/ivCard7"
+            <ImageView
+                android:id="@+id/ivCard6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="flipCard6"
+                android:src="@drawable/pokemon"
+                tools:ignore="ContentDescription" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvCard7"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="15dp"
             android:layout_marginTop="12dp"
             android:layout_marginEnd="3dp"
-            android:background="@drawable/layout_circle"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="24dp"
             app:layout_constraintDimensionRatio="1:1"
             app:layout_constraintEnd_toStartOf="@+id/gCardsVertical33"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ivCard4"
-            tools:ignore="ContentDescription" />
+            app:layout_constraintTop_toBottomOf="@+id/cvCard4">
 
-        <ImageView
-            android:id="@+id/ivCard8"
+            <ImageView
+                android:id="@+id/ivCard7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="flipCard7"
+                android:src="@drawable/pokemon"
+                tools:ignore="ContentDescription" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvCard8"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="9dp"
             android:layout_marginTop="12dp"
             android:layout_marginEnd="9dp"
-            android:background="@drawable/layout_circle"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="24dp"
             app:layout_constraintDimensionRatio="1:1"
             app:layout_constraintEnd_toStartOf="@+id/gCardsVertical66"
             app:layout_constraintStart_toStartOf="@+id/gCardsVertical33"
-            app:layout_constraintTop_toBottomOf="@+id/ivCard5"
-            tools:ignore="ContentDescription" />
+            app:layout_constraintTop_toBottomOf="@+id/cvCard5">
 
-        <ImageView
-            android:id="@+id/ivCard9"
+            <ImageView
+                android:id="@+id/ivCard8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="flipCard8"
+                android:src="@drawable/pokemon"
+                tools:ignore="ContentDescription" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvCard9"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="3dp"
             android:layout_marginTop="12dp"
             android:layout_marginEnd="15dp"
-            android:background="@drawable/layout_circle"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="24dp"
             app:layout_constraintDimensionRatio="1:1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/gCardsVertical66"
-            app:layout_constraintTop_toBottomOf="@+id/ivCard6"
-            tools:ignore="ContentDescription" />
+            app:layout_constraintTop_toBottomOf="@+id/cvCard6">
+
+            <ImageView
+                android:id="@+id/ivCard9"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="flipCard9"
+                android:src="@drawable/pokemon"
+                tools:ignore="ContentDescription" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvCard10"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="3dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="24dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toStartOf="@+id/gCardsVertical33"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvCard7">
+
+            <ImageView
+                android:id="@+id/ivCard10"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="flipCard10"
+                android:src="@drawable/pokemon"
+                tools:ignore="ContentDescription" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvCard11"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="9dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="24dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toStartOf="@+id/gCardsVertical66"
+            app:layout_constraintStart_toStartOf="@+id/gCardsVertical33"
+            app:layout_constraintTop_toBottomOf="@+id/cvCard8">
+
+            <ImageView
+                android:id="@+id/ivCard11"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="flipCard11"
+                android:src="@drawable/pokemon"
+                tools:ignore="ContentDescription" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvCard12"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="15dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="24dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/gCardsVertical66"
+            app:layout_constraintTop_toBottomOf="@+id/cvCard9">
+
+            <ImageView
+                android:id="@+id/ivCard12"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="flipCard12"
+                android:src="@drawable/pokemon"
+                tools:ignore="ContentDescription" />
+
+        </androidx.cardview.widget.CardView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
